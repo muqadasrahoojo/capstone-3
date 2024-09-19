@@ -1,30 +1,1511 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capstone-3</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capstone-3</title>
 
-    <link rel="stylesheet" href="/style.css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style.css/index.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
+    <script src="https://kit.fontawesome.com/c9ed0926e1.js" crossorigin="anonymous"></script>
 
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
+
 <body>
-<nav class="navbar bg-dark navbar-dark">
+
+
+
+
+  <header class="">
+
+
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container">
+        <a class="navbar-brand text-white" href="#">
+          <div class="d-flex align-items-center">
+            <div class="mt-1">
+              <span class="text-white bg-danger rounded-pill px-1 pt-1 fs-4">
+                <iconify-icon icon="ion:cart-outline"></iconify-icon>
+              </span>
+            </div>
+            <a class="navbar-brand" href="/index.html">
+              <h3 class="text-white">Cartzilla</h3>
+            </a>
+          </div>
+        </a>
+
+        <button style="color: #e7f0fd;" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 d-none d-xl-flex ">
+            <div style="width: 450px;" class="input-group ps-5 w-lg-50 mb-3 mt-3 ms-5">
+              <span class="input-group-text bg-dark text-white rounded-start-pill pt-2 pb-2 ms-5"
+                id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <input type="search" class="form-control bg-dark pt-3 pb-1 rounded-end-pill text-white border-start-0"
+                placeholder="Search the products" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm" />
+            </div>
+
+          </ul>
+
+
+          <div class="d-flex">
+            <div class="d-flex gap-4 align-items-center ms-5">
+
+              <a class="d-none d-xl-flex align-items-center text-decoration-none" href="#">
+                <div
+                  class="btn btn-icon btn-lg fs-lg text-danger bg-body-secondary bg-opacity-25 pe-none rounded-circle">
+                  <i class="fa-solid fa-percent"></i>
+                </div>
+
+                <div class="ps-2 text-nowrap">
+                  <span class="fs-6 text-white opacity-75">Only this month</span>
+                  <div class="fw-medium text-white">Super Sale 20%</div>
+                </div>
+              </a>
+
+
+              <div class="mt-2">
+                <span class="text-white opacity-75"><i class="fa-regular fa-sun"></i></span>
+              </div>
+
+              <div class="mt-2">
+                <a href="/log-in/login.html" class="text-white opacity-75"><i class="fa-regular fa-user"></i></a>
+              </div>
+
+              <div class="mt-2">
+                <span class="text-white opacity-75"><i class="fa-regular fa-heart"></i></span>
+              </div>
+
+
+
+              <div style="margin-top: -10px;">
+                <button class="btn offbtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight">
+                  <div class="text-black mt-4 text-white position-relative">
+                    <iconify-icon class="fs-5 top-50" icon="bi:cart"></iconify-icon>
+                    <span id="cartBadge"
+                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-success">0</span>
+                  </div>
+                </button>
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+
+
+    </nav>
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h3 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="ms-3 mt-2">
+        <p>Buy <b>$183</b> more to get Free Shipping</p>
+      </div>
+
+      <div id="cartItems" class="px-3 mt-3"></div>
+
+
+      <div class="offcanvas-footer p-3">
+        <!-- Subtotal -->
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="h5">Subtotal:</span>
+          <span class="h4" id="cartSubtotal">$0.00</span>
+        </div>
+
+        <div class="d-flex gap-3 mt-3">
+          <button class="btn btn-light btn-lg" onclick="viewCart()">View cart</button>
+          <button class="btn btn-danger btn-lg" onclick="checkout()">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="navbar navbar-expand-lg bg-dark d-none d-xl-flex">
+      <div class="container">
+        <div>
+          <div>
+            <button type="button"
+              class="btn btn-lg btn-secondary dropdown-toggle w-100 rounded-bottom-0 justify-content-start pe-none">
+              <iconify-icon class="fs-5 top-50" icon="carbon:grid"></iconify-icon>
+
+              <span class="ms-2 me-5">Categories</span>
+            </button>
+          </div>
+
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown me-lg-n2 me-xl-n1">
+              <a class="nav-link dropdown-toggle fs-sm px-3 active text-white" href="#" role="button"
+                data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu fs-sm">
+                <li><a class="dropdown-item" href="#">Electronic Store</a></li>
+                <li><a class="dropdown-item" href="#">Fashion Store</a></li>
+                <li><a class="dropdown-item" href="#">Furniture Store</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown me-lg-n2 me-xl-n1">
+              <a class="nav-link dropdown-toggle fs-sm px-3 text-white" href="#" role="button" data-bs-toggle="dropdown"
+                data-bs-trigger="hover" aria-expanded="false">Shop</a>
+              <ul class="dropdown-menu fs-sm">
+                <li><a class="dropdown-item" href="#">Grocery Store</a></li>
+                <li><a class="dropdown-item" href="#">Check out v.1</a></li>
+                <li><a class="dropdown-item" href="#">check out v.2</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown me-lg-n2 me-xl-n1">
+              <a class="nav-link dropdown-toggle fs-sm px-3 text-white" href="#" role="button" data-bs-toggle="dropdown"
+                data-bs-trigger="hover" aria-expanded="false">Account</a>
+              <ul class="dropdown-menu fs-sm">
+                <li><a class="dropdown-item" href="/sign-in/sign-in.html">Sign In</a></li>
+                <li><a class="dropdown-item" href="/log-in/login.html">Log In</a></li>
+                <li><a class="dropdown-item" href="#">Accounts</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown me-lg-n2 me-xl-n1 ">
+              <a class="nav-link dropdown-toggle fs-sm px-3 text-white" href="#" role="button" data-bs-toggle="dropdown"
+                data-bs-trigger="hover" aria-expanded="false">Pages</a>
+              <ul class="dropdown-menu fs-sm">
+                <li><a class="dropdown-item" href="#">About</a></li>
+                <li><a class="dropdown-item" href="#">Blog</a></li>
+                <li><a class="dropdown-item" href="#">Contact</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Docs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Components</a>
+            </li>
+
+          </ul>
+          <div>
+            
+            <ul class="navbar-nav ms-auto d-flex">
+              <li class="nav-item dropdown me-lg-n2 me-xl-n1">
+                <a class="nav-link dropdown-toggle fs-sm px-3 text-white" href="#" role="button"
+                  data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Eng</a>
+                <ul class="dropdown-menu fs-sm">
+                  <li><a class="dropdown-item" href="#">Français</a></li>
+                  <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                  <li><a class="dropdown-item" href="#">Italiano</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown me-lg-n1">
+                <a class="nav-link dropdown-toggle fs-sm px-3 text-white" href="#" role="button"
+                  data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">USD ($)</a>
+                <ul class="dropdown-menu dropdown-menu-end fs-sm"
+                  style="--cz-dropdown-min-width: 7rem; --cz-dropdown-spacer: .25rem">
+                  <li><a class="dropdown-item" href="#">€ EUR</a></li>
+                  <li><a class="dropdown-item" href="#">£ UKP</a></li>
+                  <li><a class="dropdown-item" href="#">¥ JPY</a></li>
+                </ul>
+              </li>
+            </ul>
+            
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+  </header>
+
+
+  <!-- Hero-section -->
+
+
+
   <div class="container">
-    <a class="navbar-brand">Cartzilla</a>
-    <form class="d-flex align-content-center" role="search">
-      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+    <div class="d-flex">
+
+
+      <div class=" pt-3 shadow-sm d-none d-xl-flex">
+        <ul class="nav flex-column px-3">
+          <li class="nav-item py-2">
+            <button class="dropdown-item" type="button">
+              <span>
+                <i class="fa-solid fa-laptop"></i>
+                Computers & Accessories
+              </span>
+              <span style="font-size: 10px;" class="ps-4"><i class="fa-solid fa-chevron-right"></i></span>
+            </button>
+          </li>
+
+          <li class="nav-item py-2">
+            <button class="dropdown-item " type="button">
+              <span><i class="fa-solid fa-mobile-alt"></i> Smartphones & Tablets</span>
+              <span style="font-size: 10px;" class="ps-5"><i class="fa-solid fa-chevron-right"></i></span>
+            </button>
+          </li>
+
+          <li class="nav-item py-2">
+            <button class="dropdown-item" type="button">
+              <span><i class="fa-solid fa-tv"></i> TV, Video & Audio</span>
+              <span style="font-size: 10px;" class="ps-5 ms-4"><i class="fa-solid fa-chevron-right"></i></span>
+            </button></ </li>
+
+          <li class="nav-item py-2">
+            <button class="dropdown-item" type="button">
+              <span><i class="fa-solid fa-volume-up"></i> Speakers & Home Music</span>
+              <span style="font-size: 10px;" class="ps-4 ms-1"><i class="fa-solid fa-chevron-right"></i></span>
+            </button>
+          </li>
+
+          <li class="nav-item py-2">
+            <button class="dropdown-item" type="button">
+              <span><i class="fa-solid fa-camera"></i> Cameras, Photo & Video</span>
+              <span style="font-size: 10px;" class="ps-4 ms-2"><i class="fa-solid fa-chevron-right"></i></span>
+            </button>
+          </li>
+
+          <li class="nav-item py-2">
+            <button class="dropdown-item" type="button">
+              <span><i class="fa-solid fa-print"></i> Printers & Ink</span>
+              <span style="font-size: 10px; padding-left: 60px;" class="ms-5"><i
+                  class="fa-solid fa-chevron-right"></i></span>
+            </button>
+          </li>
+
+          <li class="nav-item py-2">
+            <button class="dropdown-item" type="button">
+              <span><i class="fa-solid fa-charging-station"></i> Charging Stations</span>
+              <span style="font-size: 10px; padding-left: 30px;" class="ms-5"><i
+                  class="fa-solid fa-chevron-right"></i></span>
+            </button>
+          </li>
+
+          <li class="nav-item py-2">
+            <button class="dropdown-item" type="button">
+              <span><i class="fa-solid fa-headphones"></i> Headphones</span>
+              <span style="font-size: 10px; padding-left: 69px;" class="ms-5"><i
+                  class="fa-solid fa-chevron-right"></i></span>
+            </button>
+          </li>
+
+          <li class="nav-item py-2">
+            <button class="dropdown-item" type="button">
+              <span><i class="fa-regular fa-clock"></i> Wearable Electronics</span>
+              <span style="font-size: 10px;" class="ps-5 ms-2"><i class="fa-solid fa-chevron-right"></i></span>
+            </button>
+          </li>
+
+          <li class="nav-item py-2">
+            <button class="dropdown-item" type="button">
+              <span><i class="fa-solid fa-battery-three-quarters"></i> Powerbanks</span>
+              <span style="font-size: 10px; padding-left: 67px;" class="ms-5"><i
+                  class="fa-solid fa-chevron-right"></i></span>
+            </button>
+          </li>
+          <li class="nav-item py-2">
+            <button class="dropdown-item" type="button">
+              <span><i class="fa-solid fa-hdd"></i> HDD/SSD Data Storage</span>
+              <span style="font-size: 10px;" class="ps-4 ms-3"><i class="fa-solid fa-chevron-right"></i></span>
+            </button>
+          </li>
+          <li class="nav-item py-2">
+            <button class="dropdown-item" type="button">
+              <span><i class="fa-solid fa-gamepad"></i> Video Games</span>
+              <span style="font-size: 10px; padding-left: 59px;" class=" ms-5"><i
+                  class="fa-solid fa-chevron-right"></i></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+
+
+      <div class="">
+        <div class="container mt-3">
+
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner rounded-5">
+              <div class="carousel-item active">
+                <div class="hero-section px-5 rounded-5">
+                  <div class="row hero-content">
+                    <div class="col-md-6 hero-text">
+                      <small>Feel the real quality sound</small>
+                      <h1 class="text-dark fw-bolder">Headphones ProMax</h1>
+                      <a href="#" class="btn btn-danger mt-3 px-4 py-2">Shop now <span>&#8594;</span></a>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="/imgs/main-img.png" alt="Headphones" class="hero-img">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item rounded-5">
+                <div class="hero-section px-5 rounded-5">
+                  <div class="row hero-content">
+                    <div class="col-md-6 hero-text">
+                      <small>Deal of the week</small>
+                      <h1 class="text-dark fw-bolder">Powerful <br /> iPad Pro M2</h1>
+                      <a href="#" class="btn btn-danger mt-3 px-4 py-2">Shop now <span>&#8594;</span></a>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="/imgs/main-img-2.png" alt="Headphones" class="hero-img">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item rounded-5">
+                <div class="hero-section px-5 rounded-5">
+                  <div class="row hero-content">
+                    <div class="col-md-6 hero-text">
+                      <small>Virtual reality glasses</small>
+                      <h1 class="text-dark fw-bolder">Experience <br /> New Reality</h1>
+                      <a href="#" class="btn btn-danger mt-3 px-4 py-2">Shop now <span>&#8594;</span></a>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="/imgs/main-img-3.png" alt="Headphones" class="hero-img">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</nav>
+
+
+  <!-- main section -->
+  <section class="container pt-5 mt-1 mt-sm-3 mt-lg-4">
+    <div class="row row-cols-2 row-cols-md-4 g-4">
+
+      <!-- Item -->
+      <div class="col">
+        <div class="d-flex flex-column flex-xxl-row align-items-center">
+          <div class="d-flex text-dark-emphasis bg-body-secondary bg-opacity-50 rounded-pill p-4 mb-3 mb-xxl-0">
+
+
+            <iconify-icon icon="carbon:delivery-truck" class="m-xxl-1 fs-2"></iconify-icon>
+          </div>
+          <div class="text-center text-xxl-start ps-xxl-3">
+            <h3 class="h6 mb-1">Free Shipping &amp; Returns</h3>
+            <p class="fs-sm mb-0">For all orders over $199.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <div class="d-flex flex-column flex-xxl-row align-items-center">
+          <div class="d-flex text-dark-emphasis bg-body-tertiary rounded-pill p-4 mb-3 mb-xxl-0">
+
+
+            <iconify-icon icon="majesticons:creditcard-line" class="m-xxl-1 fs-2"></iconify-icon>
+
+          </div>
+          <div class="text-center text-xxl-start ps-xxl-3">
+            <h3 class="h6 mb-1">Secure Payment</h3>
+            <p class="fs-sm mb-0">We ensure secure payment</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <div class="d-flex flex-column flex-xxl-row align-items-center">
+          <div class="d-flex text-dark-emphasis bg-body-tertiary rounded-circle p-4 mb-3 mb-xxl-0">
+
+            <iconify-icon icon="mdi:circle-arrows" class="m-xxl-1 fs-2"></iconify-icon>
+          </div>
+          <div class="text-center text-xxl-start ps-xxl-3">
+            <h3 class="h6 mb-1">Money Back Guarantee</h3>
+            <p class="fs-sm mb-0">Returning money 30 days</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <div class="d-flex flex-column flex-xxl-row align-items-center">
+          <div class="d-flex text-dark-emphasis bg-body-tertiary rounded-circle p-4 mb-3 mb-xxl-0">
+            <iconify-icon icon="tdesign:chat-double" class="m-xxl-1 fs-2"></iconify-icon>
+
+          </div>
+          <div class="text-center text-xxl-start ps-xxl-3">
+            <h3 class="h6 mb-1">24/7 Customer Support</h3>
+            <p class="fs-sm mb-0">Friendly customer support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- New Arrival -->
+
+  <section class="container pt-5 mt-1 mt-sm-2 mt-md-3 mt-lg-4">
+    <h2 class="h3 pb-2 pb-sm-3 fw-semibold">New arrivals</h2>
+    <div class="row">
+
+      <!-- Banner -->
+      <div class="col-lg-4" data-bs-theme="dark">
+        <div
+          class="d-flex flex-column align-items-center justify-content-end h-100 text-center overflow-hidden rounded-5 px-4 px-lg-3 pt-4 pb-5"
+          style="background: #1d2c41 center/cover no-repeat">
+          <div class="position-relative me-lg-4">
+            <img width="80%" src="/imgs/laptop.png" alt="Laptop">
+          </div>
+          <h3 class="display-2 mb-2 text-white fw-bolder">MacBook</h3>
+          <p class="text-body fw-medium mb-4 text-white">Be Pro Anywhere</p>
+          <a class="btn btn-sm btn-danger text-white fw-semibold" href="#">
+            From $1,199
+            <i class="ci-arrow-up-right fs-base ms-1 me-n1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Product list -->
+      <div class="col-sm-6 col-lg-4 d-flex flex-column gap-3 pt-4 py-lg-4">
+
+        <!-- Item -->
+        <div class="position-relative d-flex align-items-center ps-xl-3">
+          <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+            <img src="/imgs/digital-watch.png" alt="Smart Watch">
+          </div>
+          <div class="w-100 min-w-0 ps-2 ps-sm-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <div class="d-flex gap-1 fs-xs">
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+
+              </div>
+              <span class="text-body-tertiary fs-xs">45</span>
+            </div>
+            <span class="mb-2">
+              <a class="d-block text-decoration-none text-black" href="#">
+                <small class="text-dark">Smart Watch Series 7, White</small>
+              </a>
+            </span>
+            <div class="h5 mb-0"><small>$449.00</small></div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="position-relative d-flex align-items-center ps-xl-3">
+          <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+            <img src="/imgs/electric glasses.png" width="110" alt="Glasses">
+          </div>
+          <div class="w-100 min-w-0 ps-2 ps-sm-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <div class="d-flex gap-1 fs-xs">
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small><i class="fa-regular fa-star"></i></small>
+                <small><i class="fa-regular fa-star"></i></small>
+
+              </div>
+              <span class="text-body-tertiary fs-xs">123</span>
+            </div>
+            <span class="mb-2">
+              <a class="d-block text-decoration-none text-black" href="#">
+                <small class="animate-target">VRB01 Virtual Reality Glasses</small>
+              </a>
+            </span>
+            <div class="h5 mb-0"><small>$340.99</small></div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="position-relative d-flex align-items-center ps-xl-3">
+          <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+            <img src="/imgs/hdeaphones.png" width="110" alt="Headphones">
+          </div>
+          <div class="w-100 min-w-0 ps-2 ps-sm-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <div class="d-flex gap-1 fs-xs">
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small><i class="fa-regular fa-star"></i></small>
+              </div>
+              <span class="text-body-tertiary fs-xs">34</span>
+            </div>
+            <span class="mb-2">
+              <a class="d-block text-decoration-none text-black" href="#">
+                <small class="animate-target">Wireless Bluetooth Headphones Sony</small>
+              </a>
+            </span>
+            <div class="h5 mb-0"><small>$357.00</small></div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="position-relative d-flex align-items-center ps-xl-3">
+          <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+            <img src="/imgs/mac-book.png" width="110" alt="mac-book">
+          </div>
+          <div class="w-100 min-w-0 ps-2 ps-sm-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <div class="d-flex gap-1 fs-xs">
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+              </div>
+              <span class="text-body-tertiary fs-xs">34</span>
+            </div>
+            <span class="mb-2">
+              <a class="d-block text-decoration-none text-black" href="#">
+                <small class="">Laptop Apple MacBook Pro 13 M2</small>
+              </a>
+            </span>
+            <div class="h5 mb-0"><small>$1,200.00</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product list -->
+      <div class="col-sm-6 col-lg-4 d-flex flex-column gap-3 pt-3 py-lg-4">
+
+        <!-- Item -->
+        <div class="position-relative d-flex align-items-center ps-xl-3">
+          <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+            <img src="/imgs/tablet.png" width="110" alt="iPad Pro">
+          </div>
+          <div class="w-100 min-w-0 ps-2 ps-sm-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <div class="d-flex gap-1 fs-xs">
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small><i class="fa-regular fa-star"></i></small>
+              </div>
+              <span class="text-body-tertiary fs-xs">126</span>
+            </div>
+            <span class="mb-2">
+              <a class="d-block text-decoration-none text-black" href="#">
+                <small class="">Tablet Apple iPad Air M1</small>
+              </a>
+            </span>
+            <div class="h5 mb-0"><small>$540.00</small></div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="position-relative d-flex align-items-center ps-xl-3">
+          <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+            <img src="/imgs/airpods.png" width="110" alt="AirPods 2 Pro">
+          </div>
+          <div class="w-100 min-w-0 ps-2 ps-sm-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <div class="d-flex gap-1 fs-xs">
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small><i class="fa-regular fa-star"></i></small>
+              </div>
+              <span class="text-body-tertiary fs-xs">340</span>
+            </div>
+            <span class="mb-2">
+              <a class="d-block text-decoration-none text-black" href="#"><small class="">Headphones Apple
+                  AirPods 2
+                  Pro</small></a>
+            </span>
+            <div class="h5 mb-0"><small>$209.99 </small><del
+                class="text-body-tertiary fs-sm fw-normal"><small>$356.00</small></del></div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="position-relative d-flex align-items-center ps-xl-3">
+          <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+            <img src="/imgs/powerbank.png" width="110" alt="Power Bank">
+          </div>
+          <div class="w-100 min-w-0 ps-2 ps-sm-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <div class="d-flex gap-1 fs-xs">
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small><i class="fa-regular fa-star"></i></small>
+              </div>
+              <span class="text-body-tertiary fs-xs">29</span>
+            </div>
+            <span class="mb-2">
+              <a class="d-block text-decoration-none text-black" href="#">
+                <small class="">Power Bank PBS 10000 mAh Black</small>
+              </a>
+            </span>
+            <div class="h5 mb-0"><small>$49.99</small></div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="position-relative d-flex align-items-center ps-xl-3">
+          <div class="ratio ratio-1x1 flex-shrink-0" style="width: 110px">
+            <img src="/imgs/iPhone.png" width="110" alt="iPhone">
+          </div>
+          <div class="w-100 min-w-0 ps-2 ps-sm-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <div class="d-flex gap-1 fs-xs">
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+                <small class="text-warning"><i class="fa-solid fa-star"></i></small>
+
+              </div>
+              <span class="text-body-tertiary fs-xs">12</span>
+            </div>
+            <span class="mb-2">
+              <a class=" d-block text-decoration-none text-black" href="#">
+                <small class="">Apple iPhone 14 128GB White</small>
+              </a>
+            </span>
+            <div class="h5 mb-0"><small>$899.00</small> <del
+                class="text-body-tertiary fs-sm fw-normal"><small>$958.00</small></del></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- trending products -->
+  <div class="container mt-5">
+    <h2 class="h3 pb-2 pb-sm-3 fw-semibold">Trending Products</h2>
+    <hr>
+    <div class="container my-4">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card border-0 shadow-sm">
+            <div class="position-absolute bg-danger text-white px-2 rounded">-21%</div>
+            <img src="/imgs/electric glasses.png" class="card-img-top" alt="electric Glasses">
+            <div class="card-body ">
+              <div class="d-flex align-items-center mb-2">
+                <span class="text-warning me-1">★★★★☆</span>
+                <small class="text-muted">(123)</small>
+              </div>
+              <h6 class="card-title">VRB01 Virtual Reality Glasses</h6>
+              <div class="d-flex mt-2">
+                <p class="h5 text-danger">$340.99<small
+                    class="fs-6 ms-1 text-secondary text-decoration-line-through">$430.00</small>
+                </p>
+
+              </div>
+
+              <div>
+                <button class="btn btn-outline-danger btn-sm" onclick="addToShoppingCart('VRB01 Virtual Reality Glasses', 340.99,
+                   '/imgs/electric glasses.png', 'One Size', 'High-quality VR glasses')"><i
+                    class="fas fa-shopping-cart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card border-0 shadow-sm">
+            <img src="/imgs/iPhone.png" class="card-img-top" alt="iPhone">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="text-warning me-1">★★★★☆</span>
+                <small class="text-muted">(142)</small>
+              </div>
+              <h6 class="card-title">Apple iPhone 14 128GB White</h6>
+              <div class="d-flex mt-2">
+                <p class="h5 text-dark">$899.00</p>
+
+              </div>
+              <div>
+                <button class="btn btn-outline-danger btn-sm" onclick="addToShoppingCart('Apple iPhone 14 128GB White', 899.00,
+                 '/imgs/iPhone.png', 'One Size', 'iPhone')"><i class="fas fa-shopping-cart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card border-0 shadow-sm">
+            <img src="/imgs/digital-watch.png" class="card-img-top" alt="digital watch">
+            <div class="card-body ">
+              <div class="d-flex align-items-center mb-2">
+                <span class="text-warning me-1">★★★★☆</span>
+                <small class="text-muted">(67)</small>
+              </div>
+              <h6 class="card-title">Smart Watch Series 7, White</h6>
+              <div class="d-flex mt-2">
+                <p class="h5 text-dark">$429.00</p>
+
+              </div>
+              <div>
+                <button class="btn btn-outline-danger btn-sm" onclick="addToShoppingCart('Smart Watch Series 7, White', 4299.00,
+                 '/imgs/digital-watch.png', 'One Size', 'Watch Series')"><i class="fas fa-shopping-cart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card border-0 shadow-sm">
+            <div class="position-absolute bg-primary text-white px-2 rounded">New</div>
+            <img src="/imgs/mac-book.png" class="card-img-top pb-3" alt="mac-book">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="text-warning me-1">★★★★☆</span>
+                <small class="text-muted">(67)</small>
+              </div>
+              <h6 class="card-title">Laptop Apple MacBook Pro 13 M2</h6>
+              <div class="d-flex mt-2">
+                <p class="h5 text-dark">$1,200.00</p>
+
+              </div>
+              <div>
+                <button class="btn btn-outline-danger btn-sm" onclick="addToShoppingCart('Laptop Apple MacBook Pro 13 M2',  1200.00,
+                 '/imgs/mac-book.png', 'One Size', 'Apple-mac-book')"><i class="fas fa-shopping-cart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card-5 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="/imgs/tablet.png" class="card-img-top" alt="tavlet">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="text-warning me-1">★★★★☆</span>
+                <small class="text-muted">(12)</small>
+              </div>
+              <h6 class="card-title">Tablet Apple iPad Air M1</h6>
+              <div class="d-flex mt-2">
+                <p class="h5 text-dark">$540.00</p>
+
+              </div>
+              <div>
+                <button class="btn btn-outline-danger btn-sm" onclick="addToShoppingCart('Tablet Apple iPad Air M1', 540.00,
+                 '/imgs/tablet.png', 'One Size', 'ipad')"><i class="fas fa-shopping-cart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--card-6 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="/imgs/airpods.png" class="card-img-top" alt="airpods">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="text-warning me-1">★★★★☆</span>
+                <small class="text-muted">(78)</small>
+              </div>
+              <h6 class="card-title">Headphones Apple AirPods 2 Pro</h6>
+              <div class="d-flex mt-2">
+                <p class="h5 text-dark">$224.00</p>
+
+              </div>
+              <div>
+                <button class="btn btn-outline-danger btn-sm" onclick="addToShoppingCart('Headphones Apple AirPods 2 Pro', 224.00,
+                 '/imgs/airpods.png', 'One Size', 'Headphones')"><i class="fas fa-shopping-cart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card-7 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="/imgs/tablet-laptop.png" class="card-img-top pb-3" alt="tablet-laptop">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="text-warning me-1">★★★★☆</span>
+                <small class="text-muted">(49)</small>
+              </div>
+              <h6 class="card-title">Tablet Apple pro Air M1</h6>
+
+
+              <div class="d-flex mt-2">
+                <p class="h5 text-dark">$739.00</p>
+
+
+              </div>
+              <div>
+                <button class="btn btn-outline-danger btn-sm" onclick="addToShoppingCart('Tablet Apple pro Air M1', 739.00,
+                 '/imgs/tablet-laptop.png', 'One Size', 'Tablet apple')"><i class="fas fa-shopping-cart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card-8 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="/imgs/hdeaphones.png" class="card-img-top" alt="wireless headphoes">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="text-warning me-1">★★★★☆</span>
+                <small class="text-muted">(136)</small>
+              </div>
+              <h6 class="card-title">Wireless Bluetooth Headphones</h6>
+              <div class="d-flex mt-2">
+                <p class="h5 text-dark">$299.00</p>
+
+
+              </div>
+              <div>
+                <button class="btn btn-outline-danger btn-sm" onclick="addToShoppingCart('Wireless Bluetooth Headphones sony', 299.00,
+                 '/imgs/hdeaphones.png', 'One Size', 'Wireless bluetooth headphones')"><i
+                    class="fas fa-shopping-cart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
-   
-   <script src="/script.js"></script>
+
+  </div>
+  </div>
+
+
+  <!-- camera img -->
+  <div class="container">
+    <section class="container pt-5 mt-sm-2 mt-md-3 mt-lg-4">
+      <div class="row g-0">
+        <div class="col-md-3 mb-n4 mb-md-0">
+          <div class="position-relative d-flex flex-column align-items-center justify-content-center h-100 py-5">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-none d-md-block">
+              <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none-dark"
+                style="background-color: #accbee"></span>
+              <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none d-block-dark"
+                style="background-color: #1b273a"></span>
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-md-none">
+              <span class="position-absolute top-0 start-0 w-100 h-100 rounded-top-5 d-none-dark"
+                style="background: linear-gradient(90deg, #accbee 0%, #e7f0fd 100%)"></span>
+              <span class="position-absolute top-0 start-0 w-100 h-100 rounded-top-5 d-none d-block-dark"
+                style="background: linear-gradient(90deg, #1b273a 0%, #1f2632 100%)"></span>
+            </div>
+            <div class="position-relative z-1 display-1 text-dark text-nowrap mb-0 fw-bolder">
+              20
+              <span class="d-inline-block ms-n2">
+                <span class="d-block fs-1">%</span>
+                <span class="d-block fs-5">OFF</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 position-relative">
+          <div class="position-absolute top-0 start-0 h-100 overflow-hidden rounded-pill z-2 d-none d-md-block"
+            style="color: var(--cz-body-bg); margin-left: -2px">
+
+          </div>
+          <div class="position-relative">
+            <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none-dark rtl-flip mt-1"
+              style="background: linear-gradient(90deg, #accbee 0%, #e7f0fd 100%)"></span>
+            <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none d-block-dark rtl-flip"
+              style="background: linear-gradient(90deg, #1b273a 0%, #1f2632 100%)"></span>
+            <div class="row align-items-center position-relative">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <div class="text-center text-md-start py-md-5 px-4 ps-md-5 pe-md-0 me-md-n5">
+                  <h3 class="text-uppercase fw-bold ps-xxl-3 pb-2 mb-1 mt-2">Seasonal weekly sale 2024</h3>
+                  <p class="text-body-emphasis ps-xxl-3 mb-0">Use code <span
+                      class="d-inline-block fw-semibold bg-white text-dark rounded-pill py-1 px-2">Sale 2024</span> to
+                    get best offer</p>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex justify-content-center justify-content-md-end pb-5 pb-md-0">
+                <div class="me-xxl-4">
+                  <img src="/imgs/camera.png" class="d-block rtl-flip" width="420" alt="Camera">
+                  <div class="d-none d-lg-block" style="margin-bottom: -9%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-none d-lg-block" style="padding-bottom: 3%"></div>
+    </section>
+  </div>
+
+
+
+  <!-- special offers -->
+
+  <div>
+    <section class="container pt-5 mt-2 mt-sm-3 mt-lg-4">
+
+      <!-- Heading + Countdown -->
+      <div class="d-flex align-items-start align-items-md-center justify-content-between border-bottom pb-3 pb-md-4">
+        <div class="d-md-flex align-items-center">
+          <h2 class="h3 pe-3 me-3 mb-md-0">Special offers for you</h2>
+
+          <div class="d-flex align-items-center" data-countdown-date="demoDate">
+            <div class="btn btn-danger pe-none px-2">
+              <span data-days="">12</span>
+              <span>d</span>
+            </div>
+            <div class="animate-blinking text-body-tertiary fs-lg fw-medium mx-2">:</div>
+            <div class="btn btn-danger pe-none px-2">
+              <span data-hours="">22</span>
+              <span>h</span>
+            </div>
+            <div class="animate-blinking text-body-tertiary fs-lg fw-medium mx-2">:</div>
+            <div class="btn btn-danger pe-none px-2">
+              <span data-minutes="">48</span>
+              <span>m</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
+  </div>
+
+  <!-- Special offers-->
+  <div class="container my-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="/imgs/black-airpods.png" class="card-img-top" alt="airpods">
+          <div class="card-body ">
+            <h5 class="card-title mb-2">Xiaomi Wireless Buds Pro</h5>
+            <p class="text-warning mb-1">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-muted">(14)</span></p>
+            <h6 class="text-dark fw-bold">$129.99 <del class="text-muted">$156.00</del></h6>
+            <p class="text-muted mb-1">Available: <span class="text-dark fw-bold">112</span></p>
+            <button class="btn btn-outline-secondary btn-sm" onclick="addToShoppingCart('Xiaomi Wireless Buds Pro', 129.99,
+                   '/imgs/black-airpods.png', 'One Size', 'Buds Pro')"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+          <img width="60px" src="/imgs/smart-watch].png" class="card-img-top" alt="digital watch">
+          <div class="card-body ">
+            <h5 class="card-title mb-2">Smart Watch Series 7, White</h5>
+            <p class="text-warning mb-1">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-muted">(138)</span></p>
+            <h6 class="text-dark fw-bold">$429.00 <del class="text-muted">$486.00</del></h6>
+            <p class="text-muted mb-1">Available: <span class="text-dark fw-bold">45</span></p>
+            <button class="btn btn-outline-secondary btn-sm" onclick="addToShoppingCart('Xiaomi Wireless Buds Pro', 129.99,
+             '/imgs/black-airpods.png', 'One Size', 'Buds Pro')"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="/imgs/black-camera.png" class="card-img-top" alt="Camera">
+          <div class="card-body ">
+            <h5 class="card-title mb-2">VRB01 Camera Nikon Max</h5>
+            <p class="text-warning mb-1">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-muted">(64)</span></p>
+            <h6 class="text-dark fw-bold">$652.00 <del class="text-muted">$785.00</del></h6>
+            <p class="text-muted mb-1">Available: <span class="text-dark fw-bold">13</span></p>
+            <button class="btn btn-outline-secondary btn-sm" onclick="addToShoppingCart('VRB01 Camera Nikon Max', 652.00,
+             '/imgs/black-camera.png', 'One Size', 'Camera Nikon')"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+          <img width="75%" src="/imgs/blue-iPhone.png" class="card-img-top" alt="iPhone">
+          <div class="card-body">
+            <h5 class="card-title mb-2">Apple iPhone 14 128GB Blue</h5>
+            <p class="text-warning mb-1">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-muted">(51)</span></p>
+            <h6 class="text-dark fw-bold">$652.00 <del class="text-muted">$785.00</del></h6>
+            <p class="text-muted mb-1">Available:<span class="text-dark fw-bold">7</span></p>
+            <button class="btn btn-outline-secondary btn-sm" onclick="addToShoppingCart('Apple iPhone 14 128GB Blue', 652.00,
+             '/imgs/blue-iPhone.png', 'One Size', 'iphone-14')"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- adds -->
+
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <!-- Brand Card 1 -->
+      <div class="col-6 col-md-2 mb-3">
+        <div class="card border-light text-center shadow-sm">
+          <div class="card-body">
+            <p class="mb-0 p-3 fw-bold">Apple</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Card 2 -->
+      <div class="col-6 col-md-2 mb-3">
+        <div class="card border-light text-center shadow-sm">
+          <div class="card-body">
+
+            <p class="mb-0 p-3 fw-bold">MOTOROLA</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Card 3 -->
+      <div class="col-6 col-md-2 mb-3">
+        <div class="card border-light text-center shadow-sm">
+          <div class="card-body">
+
+            <p class="mb-0 p-3 fw-bold">Canon</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Card 4 -->
+      <div class="col-6 col-md-2 mb-3">
+        <div class="card border-light text-center shadow-sm">
+          <div class="card-body">
+
+            <p class="mb-0 p-3 fw-bold">SAMSUNG</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Card 5 -->
+      <div class="col-6 col-md-2 mb-3">
+        <div class="card border-light text-center shadow-sm">
+          <div class="card-body">
+
+            <p class="mb-0 p-3 fw-bold">SONY</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Card 6 -->
+      <div class="col-6 col-md-2 mb-3">
+        <div class="card border-light text-center shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-list-ul fa-2x"></i>
+            <p class="mb-0">All brands</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- subscribe -->
+  <section class="bg-body-tertiary py-5">
+    <div class="container pt-sm-2 pt-md-3 pt-lg-4 pt-xl-5">
+      <div class="row">
+        <div class="col-md-6 col-lg-5 mb-5 mb-md-0">
+          <h2 class="h4 mb-2">Sign up to our newsletter</h2>
+          <p class="text-body pb-2 pb-ms-3">Receive our latest updates about our products &amp; promotions</p>
+          <form class="d-flex needs-validation pb-1 pb-sm-2 pb-md-3 pb-lg-0 mb-4 mb-lg-5" novalidate="">
+            <div class="position-relative w-100 me-2">
+              <input type="email" class="form-control form-control-lg" placeholder="Your email" required="">
+            </div>
+            <button type="submit" class="btn btn-lg btn-danger">Subscribe</button>
+          </form>
+          <div class="d-flex gap-3">
+            <a class="btn btn-icon bg-body-secondary rounded-circle text-black" href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a class="btn btn-icon bg-body-secondary rounded-circle text-black" href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a class="btn btn-icon bg-body-secondary  rounded-circle text-black" href="#" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a class="btn btn-icon bg-body-secondary rounded-circle text-black" href="#" aria-label="Telegram">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-2">
+          <ul class="list-unstyled d-flex flex-column gap-4 ps-md-4 ps-lg-0 mb-3">
+            <li class="nav flex-nowrap align-items-center position-relative">
+              <img src="/imgs/subs-img-1.jpg" class="rounded" width="140" alt="subs-img-1">
+              <div class="ps-3">
+                <div class="fs-xs text-body-secondary lh-sm mb-2">6:16</div>
+                <a class="nav-link fs-sm text-black p-0" href="#">5 New Cool Gadgets You
+                  Must See on Cartzilla - Cheap Budget</a>
+              </div>
+            </li>
+            <li class="nav flex-nowrap align-items-center position-relative">
+              <img src="/imgs/subs-img-2.jpg" class="rounded" width="140" alt="subs-img-2">
+              <div class="ps-3">
+                <div class="fs-xs text-body-secondary lh-sm mb-2">10:20</div>
+                <a class="nav-link fs-sm text-black p-0" href="#">5 Super Useful Gadgets on
+                  Cartzilla You Must Have in 2023</a>
+              </div>
+            </li>
+            <li class="nav flex-nowrap align-items-center position-relative">
+              <img src="/imgs/subs-img-3.jpg" class="rounded" width="140" alt="subs-img-3">
+              <div class="ps-3">
+                <div class="fs-xs text-body-secondary lh-sm mb-2">8:40</div>
+                <a class="nav-link fs-sm text-black p-0" href="#!">Top 5 New Amazing Gadgets
+                  on Cartzilla You Must See</a>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <div class="position-relative pt-sm-2 pt-md-3 pt-lg-4 bg-dark">
+
+    <!-- Columns with links that are turned into accordion on screens < 500px wide (sm breakpoint) -->
+    <div class="accordion py-5 container" id="footerLinks">
+      <div class="row">
+        <div class="col-md-4 d-sm-flex flex-md-column align-items-center align-items-md-start pb-3 mb-sm-4">
+          <h4 class="mb-sm-0 mb-md-4 me-4">
+            <a class="text-white opacity-75 text-decoration-none" href="index.html">Cartzilla</a>
+          </h4>
+          <p class="text-white opacity-75 fs-sm text-sm-end text-md-start mb-sm-0 mb-md-3 ms-0 ms-sm-auto ms-md-0 me-4">
+            Got questions? Contact us 24/7</p>
+          <div class="dropdown" style="max-width: 250px">
+            <button type="button" class="btn btn-light dropdown-toggle justify-content-between w-100 d-none-dark"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Help and consultation
+            </button>
+            <button type="button"
+              class="btn btn-secondary dropdown-toggle justify-content-between w-100 d-none d-flex-dark"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Help and consultation
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Help center &amp; FAQ</a></li>
+              <li><a class="dropdown-item" href="#">Support chat</a></li>
+              <li><a class="dropdown-item" href="#">Open support ticket</a></li>
+              <li><a class="dropdown-item" href="#">Call center</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="row row-cols-1 row-cols-sm-3 gx-3 gx-md-4">
+            <div class="accordion-item col border-0 bg-dark">
+              <h6 class="accordion-header" id="companyHeading">
+                <span class="text-white d-none d-sm-block">Company</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse"
+                  data-bs-target="#companyLinks" aria-expanded="false" aria-controls="companyLinks">Company</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="companyLinks" aria-labelledby="companyHeading"
+                data-bs-parent="#footerLinks">
+                <ul class="nav flex-column gap-2 pt-sm-3 pb-3 mt-n1 mb-1">
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link animate-target d-inline fw-normal text-white opacity-75 p-0" href="#">About
+                      company</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link animate-target d-inline fw-normal text-white opacity-75 p-0" href="#">Our
+                      team</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link animate-target d-inline fw-normal text-white opacity-75 p-0" href="#">Careers</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link animate-target d-inline fw-normal text-white opacity-75 p-0" href="#">Contact
+                      us</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link animate-target d-inline fw-normal text-white opacity-75 p-0" href="#">News</a>
+                  </li>
+                </ul>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+            <div class="accordion-item col border-0 bg-dark">
+              <h6 class="accordion-header" id="accountHeading">
+                <span class="text-white d-none d-sm-block">Account</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse"
+                  data-bs-target="#accountLinks" aria-expanded="false" aria-controls="accountLinks">Account</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="accountLinks" aria-labelledby="accountHeading"
+                data-bs-parent="#footerLinks">
+                <ul class="nav flex-column gap-2 pt-sm-3 pb-3 mt-n1 mb-1">
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link d-inline fw-normal text-white opacity-75 p-0" href="#">Your
+                      account</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link d-inline fw-normal text-white opacity-75 p-0" href="#">Shipping
+                      rates &amp; policies</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link d-inline fw-normal text-white opacity-75 p-0" href="#">Refunds
+                      &amp; replacements</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link d-inline fw-normal text-white opacity-75 p-0" href="#">Delivery
+                      info</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link d-inline fw-normal text-white opacity-75 p-0" href="#">Order
+                      tracking</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link d-inline fw-normal text-white opacity-75 p-0" href="#">Taxes &amp;
+                      fees</a>
+                  </li>
+                </ul>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+            <div class="accordion-item col border-0 bg-dark text-white">
+              <h6 class="accordion-header" id="customerHeading">
+                <span class="text-white d-none d-sm-block">Customer service</span>
+                <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse"
+                  data-bs-target="#customerLinks" aria-expanded="false" aria-controls="customerLinks">Customer
+                  service</button>
+              </h6>
+              <div class="accordion-collapse collapse d-sm-block" id="customerLinks" aria-labelledby="customerHeading"
+                data-bs-parent="#footerLinks">
+                <ul class="nav flex-column gap-2 pt-sm-3 pb-3 mt-n1 mb-1">
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link d-inline fw-normal text-white opacity-75 p-0" href="#">Payment
+                      methods</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link d-inline fw-normal text-white opacity-75 p-0" href="#">Money back
+                      guarantee</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link d-inline fw-normal text-white opacity-75 p-0" href="#">Product
+                      returns</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link d-inline fw-normal text-white opacity-75 p-0" href="#">Support
+                      center</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link d-inline fw-normal text-white opacity-75 p-0" href="#">Shipping</a>
+                  </li>
+                  <li class="d-flex w-100 pt-1">
+                    <a class="nav-link d-inline fw-normal text-white opacity-75 p-0" href="#">Terms &amp;
+                      conditions</a>
+                  </li>
+                </ul>
+              </div>
+              <hr class="d-sm-none my-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category / tag links -->
+    <div class="d-flex flex-column gap-3 pb-3 pb-md-4 pb-lg-5 mt-n2 mt-sm-n4 mt-lg-0 mb-4 container">
+      <ul class="nav align-items-center text-body-tertiary gap-2">
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Computers</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Smartphones</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">TV, Video</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Speakers</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Cameras</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Printers</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Video Games</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Headphones</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Wearable</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">HDD/SSD</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Smart Home</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Apple Devices</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Tablets</a>
+        </li>
+      </ul>
+      <ul class="nav align-items-center text-body-tertiary gap-2">
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Monitors</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Scanners</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Servers</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Heating and Cooling</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">E-readers</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Data Storage</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Networking</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Power Strips</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Plugs and Outlets</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Detectors and Sensors</a>
+        </li>
+        <li class="px-1 text-white opacity-75">/</li>
+        <li>
+          <a class="nav-link fw-normal p-0 text-white opacity-75" href="#">Accessories</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Copyright + Payment methods -->
+    <div class="d-md-flex align-items-center border-top py-4 container">
+      <div class="d-flex gap-2 gap-sm-3 justify-content-center ms-md-auto mb-4 mb-md-0 order-md-2">
+        <div>
+          <iconify-icon class="text-white fs-1" icon="simple-icons:visa"></iconify-icon>
+        </div>
+        <div>
+          <iconify-icon class="text-white fs-3 mt-2" icon="logos:mastercard"></iconify-icon>
+
+        </div>
+        <div>
+          <iconify-icon class="text-white fs-3 mt-2" icon="fontisto:paypal"></iconify-icon>
+
+        </div>
+        <div>
+          <iconify-icon class="text-white fs-3 mt-2" icon="logos:google-pay"></iconify-icon>
+        </div>
+        <div>
+          <iconify-icon class="text-white fs-1" icon="fa6-brands:apple-pay"></iconify-icon>
+
+        </div>
+      </div>
+      <p class="text-white opacity-75 fs-xs text-center text-md-start mb-0 me-4 order-md-1">© All rights reserved. Made
+        by <span><a class=text-white opacity-75 text-dark-emphasis fw-medium text-decoration-none" href="#"
+            target="_blank" rel="noreferrer">Createx Studio</a></span></p>
+    </div>
+  </div>
+
+
+
+
+  <script src="/script.js"></script>
 </body>
+
 </html>
