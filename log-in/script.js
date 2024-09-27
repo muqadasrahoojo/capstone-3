@@ -1,45 +1,44 @@
-document.getElementById('createForm').addEventListener('submit', function(event) {
+
+
+document
+  .getElementById("createForm")
+  .addEventListener("submit", async function (event) {
     event.preventDefault();
-    
-    const email = document.getElementById('email').value; 
-    const password = document.getElementById('password').value;
 
-    fetch('https://fakestoreapi.com/users', {
-        method: 'POST',
-        body: JSON.stringify({
-            email: email, 
-            password: password
-        }),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(res => {
-        if (!res.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return res.json();
-    })
-    .then(data => {
-        console.log('User created:', data);  
+    let userEmail = document.getElementById("userEmail").value;
+    let userPassword = document.getElementById("userPassword").value;
 
-    
-        const user = {
-            email: email, 
-            password: password
-        };
-        localStorage.setItem('user', JSON.stringify(user));
+    console.log("Email:", userEmail);
+    console.log("Password:", userPassword);
 
-        alert('Account created successfully! Redirecting to Sign In...');
-        window.location.href = '/sign-in/signin.html'; 
+    try {
+      let API = "https://fakestoreapi.com/users";
+      let getApi = await fetch(API);
+      let apiJson = await getApi.json();
 
-        
-    })
-    .catch(err => {
-        console.error('Error:', err);
-        alert('Failed to create account. Try again.');
-    });
-});
+      console.log("All Users from API:", apiJson);
+
+      let users = [
+        { email: "kev02937@", password: "kevin@gmail.com" },
+        { email: "john@gmail.com", password: "m38rmF$" },
+        { email: "user3@example.com", password: "password3" }
+      ];
+
+      let isUserValid = users.some(
+        (user) => user.email === userEmail && user.password === userPassword
+      );
+
+      if (isUserValid) {
+        alert("Login successful!");
+        window.location.href = "/index.html";
+      } else {
+        alert("Invalid email or password. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  });
 
 
-
+  // m38rmF$"
+  // john@gmail.com

@@ -1,29 +1,26 @@
-document.getElementById('signinForm').addEventListener('submit', async (event) => {
+
+document
+.getElementById("signinForm")
+.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value; // Corrected variable name
 
-  try {
-      const response = await fetch('https://fakestoreapi.com/users', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ email, password })
-      });
+  if (email && password) {
+    alert("Login successful!");
 
-      if (response.ok) {
-          const data = await response.json();
-          alert('Sign in successful!');
-          window.location.href = '/index.html'; 
-      } else {
-          const data = await response.json();
-          alert(`Error: ${data.message}`);
-      }
-  } catch (error) {
-      alert('An error occurred while signing in!');
-      console.error('Error details:', error);
+    window.location.href = "/log-in/login.html";
+  } else {
+    let existingMessage = document.getElementById("message");
+    if (existingMessage) {
+      existingMessage.remove();
+    }
+
+    let errorMessage = document.createElement("p");
+    errorMessage.id = "message"; 
+    errorMessage.style.color = "red";
+    errorMessage.textContent = "Error: Invalid email or password. Please try again!";
+    document.getElementById("signinForm").appendChild(errorMessage);
   }
 });
-
