@@ -26,4 +26,8 @@
         text-align: center;
     }
 }
+.form-control::placeholder {
+    color: #686666 !important;
+    opacity: 1 !important;
+}
 
